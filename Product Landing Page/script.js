@@ -23,16 +23,28 @@ document.querySelectorAll(".buyNowBtn").forEach(function (btn) {
   });
 });
 
-document.querySelectorAll(".toggleDetailsBtn").forEach(function (btn) {
-  btn.addEventListener("click", function () {
-    const details = this.parentElement.querySelector(".moreDetails");
-    const isHidden = details.hasAttribute("hidden");
-    if (isHidden) {
-      details.removeAttribute("hidden");
-      this.textContent = "Hide Details";
-    } else {
-      details.setAttribute("hidden", "");
-      this.textContent = "More Details";
+document.addEventListener('DOMContentLoaded', function () {
+  const modal = document.getElementById('detailsModal');
+  const modalDetails = document.querySelector('.modal-details');
+  const closeModalBtn = document.querySelector('.close-modal');
+
+  document.querySelectorAll('.toggleDetailsBtn').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      const details = btn.parentElement.querySelector('.moreDetails');
+      if (details) {
+        modalDetails.innerHTML = details.innerHTML;
+        modal.removeAttribute('hidden');
+      }
+    });
+  });
+
+  closeModalBtn.addEventListener('click', function() {
+    modal.setAttribute('hidden', '');
+  });
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.setAttribute('hidden', '');
     }
   });
 });

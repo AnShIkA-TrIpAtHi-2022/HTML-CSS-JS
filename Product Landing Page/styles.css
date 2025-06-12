@@ -346,8 +346,53 @@ footer {
   background: #1a1a2e;
   color: var(--footer-link);
   text-align: center;
-  padding: 1rem 0 0.5rem 0;
-  font-size: 0.98rem;
+  padding: 0.1rem 0 0.1rem 0;
+  font-size: 0.88rem;
+}
+
+/* Modal styles */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+}
+.modal[hidden] {
+  display: none;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90vw;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  position: relative;
+  animation: modalIn 0.2s;
+}
+@keyframes modalIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.close-modal {
+  position: absolute;
+  top: 0.7rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: #e91e63;
+  cursor: pointer;
+  font-weight: bold;
+}
+.modal-details p {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
 }
 
 /* Responsive */
