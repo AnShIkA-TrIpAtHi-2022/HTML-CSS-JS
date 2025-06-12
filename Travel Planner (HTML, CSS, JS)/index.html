@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Travel Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="validation.js"></script>
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <h1>Smart Travel Planner</h1>
+        <nav>
+        <a href="#home">Home</a> |
+        <a href="#community">Community</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Trip Details Form Section -->
+        <section id="trip-details">
+            <h2>Plan Your Trip</h2>
+            <form id="tripForm">
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required placeholder="Manali" title="Enter your travel destination (letters, spaces, hyphens only)"/><br><br>
+
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" required title="Select the start date of your trip (cannot be in the past)"/><br><br>
+
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate" required title="Select the end date of your trip (must be after start date)"/><br><br>
+
+                <label for="preferences">Preferences:</label>
+                <select id="preferences" name="preferences" required title="Choose your travel preference">
+                    <option value="">--Select--</option>
+                    <option value="adventure" selected>Adventure</option>
+                    <option value="relaxation">Relaxation</option>
+                    <option value="sightseeing">Sightseeing</option>
+                </select><br><br>
+
+                <button type="submit" id="submitButton" title="Fill all fields to enable and submit the form">Submit</button>
+            </form>
+        </section>
+
+        <!-- User Profile Section -->
+        <section id="user-profile">
+            <h2>User Profile</h2>
+            <div class="user-info">
+                <img src="https://wallpapers.com/images/hd/placeholder-profile-icon-20tehfawxt5eihco.png" alt="User Profile Image" class="avatar">
+                <div>
+                    <p><strong>Name:</strong> John Doe</p>
+                    <p><strong>Email:</strong> john@example.com</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trip Summary Section -->
+        <section id="trip-summary">
+            <h2>Trip Summary</h2>
+            <p><strong>Overview:</strong> Coming soon...</p>
+        </section>
+
+        <!-- Community Section -->
+        <section id="community">
+            <h2>Community</h2>
+            <label for="comment">Add a Comment:</label><br>
+            <input type="text" id="comment" name="comment">
+            <span id="charCount" style="font-size:0.9em; margin-left:10px;"></span><br><br>
+            <button onclick="submitComment()">Post Comment</button>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact us: travelplanner@example.com</p>
+        <p>&copy; 2025 Smart Travel Planner</p>
+    </footer>
+
+</body>
+</html>

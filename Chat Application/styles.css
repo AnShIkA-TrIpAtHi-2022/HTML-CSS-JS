@@ -1,0 +1,314 @@
+body {
+    background: #0a1833;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background: #142850;
+    color: #00ffe7;
+    padding: 1rem 2rem;
+    text-align: center;
+    letter-spacing: 2px;
+    box-shadow: 0 2px 8px #00ffe733;
+}
+
+.chat-main {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    background: #162447;
+}
+
+.user-list-section {
+    width: 250px;
+    background: #1b1b2f;
+    padding: 1rem;
+    border-right: 2px solid #00ffe7;
+    display: flex;
+    flex-direction: column;
+}
+.user-list-section h2 {
+    color: #00ffe7;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+#user-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+.user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.user:hover, .user:focus {
+    background: linear-gradient(90deg, #00ffe7 10%, #142850 90%);
+    color: #0a1833;
+    box-shadow: 0 0 8px #00ffe7, 0 2px 8px #00ffe733;
+}
+.user.selected {
+    background: linear-gradient(90deg, #00bfff 10%, #142850 90%);
+    color: #fff;
+    box-shadow: 0 0 8px #00bfff, 0 2px 8px #00bfff33;
+}
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 8px #00ffe7;
+}
+.status-dot.online {
+    background: #00ffb3;
+    box-shadow: 0 0 8px #00ffb3, 0 0 2px #fff;
+}
+.status-dot.offline {
+    background: #ff005c;
+    box-shadow: 0 0 8px #ff005c, 0 0 2px #fff;
+}
+
+.chat-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem 0 1rem;
+    min-width: 0;
+}
+.chat-window {
+    background: #222a45;
+    border-radius: 10px;
+    padding: 1rem;
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 16px #00ffe733;
+    min-height: 200px;
+    max-height: 60vh;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+#message-input {
+    flex: 1;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    background: #1b1b2f;
+    color: #fff;
+    resize: none;
+    box-shadow: 0 0 8px #00ffe733;
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+#message-input:focus {
+    box-shadow: 0 0 12px #00ffe7;
+}
+#send-btn {
+    background: linear-gradient(90deg, #00ffe7, #00bfff);
+    color: #0a1833;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 8px #00ffe7;
+    transition: background 0.2s, color 0.2s;
+}
+#send-btn:hover {
+    background: linear-gradient(90deg, #00bfff, #00ffe7);
+    color: #fff;
+}
+
+.chat-footer {
+    background: #142850;
+    color: #00ffe7;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    box-shadow: 0 -2px 8px #00ffe733;
+}
+.chat-footer a {
+    color: #00ffe7;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.2s;
+}
+.chat-footer a:hover {
+    color: #ff005c;
+}
+
+.chat-message {
+    max-width: 70%;
+    margin-bottom: 0.7rem;
+    padding: 0.7rem 1.1rem;
+    border-radius: 18px 18px 4px 18px;
+    background: linear-gradient(120deg, #142850 80%, #00ffe7 100%);
+    color: #fff;
+    font-size: 1.05rem;
+    align-self: flex-end;
+    box-shadow: 0 2px 8px #00ffe733;
+    word-break: break-word;
+    position: relative;
+    animation: fadeInMsg 0.2s;
+}
+@keyframes fadeInMsg {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.sender {
+    display: none;
+}
+
+/* User message alignment for WhatsApp-like look */
+#chat-window {
+    display: flex;
+    flex-direction: column;
+}
+
+.toggle-users-btn {
+    width: 100%;
+    background: linear-gradient(90deg, #00ffe7 10%, #142850 90%);
+    color: #0a1833;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 0 8px #00ffe7, 0 2px 8px #00ffe733;
+    transition: background 0.2s, color 0.2s;
+}
+.toggle-users-btn:focus {
+    outline: 2px solid #00ffe7;
+}
+.toggle-users-btn i {
+    font-size: 1rem;
+    transition: transform 0.2s;
+}
+.user-list-section.collapsed #user-list {
+    display: none;
+}
+.user-list-section.collapsed .toggle-users-btn i {
+    transform: rotate(-180deg);
+}
+.toggle-users-hamburger {
+    background: none;
+    border: none;
+    color: #00ffe7;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    outline: none;
+    transition: color 0.2s;
+    align-self: flex-end;
+    z-index: 2;
+}
+.toggle-users-hamburger:focus,
+.toggle-users-hamburger:hover {
+    color: #00bfff;
+}
+
+.user-list-section.collapsed {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    padding: 1rem 0.3rem;
+    overflow: hidden;
+    transition: width 0.3s;
+}
+.user-list-section.collapsed h2,
+.user-list-section.collapsed #user-list {
+    display: none;
+}
+.user-list-section.collapsed .toggle-users-hamburger {
+    align-self: center;
+}
+.user-list-section {
+    transition: width 0.3s;
+}
+
+.chat-user-header {
+    background: #1b1b2f;
+    color: #00ffe7;
+    font-size: 1.15rem;
+    font-weight: bold;
+    padding: 0.7rem 1rem;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px #00ffe733;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+}
+
+@media (max-width: 800px) {
+    .chat-main {
+        flex-direction: column;
+    }
+    .user-list-section {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #00ffe7;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+    .user-list-section h2 {
+        display: none;
+    }
+    #user-list {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .user {
+        margin-bottom: 0;
+    }
+    .user-list-section.collapsed {
+        width: 60px;
+        min-width: 60px;
+        max-width: 60px;
+    }
+}
+
+@media (max-width: 500px) {
+    .chat-header, .chat-footer {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+    .chat-section {
+        padding: 0.5rem;
+    }
+    #send-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}

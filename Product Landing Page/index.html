@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Landing Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 class="gradient-logo">MyCoolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="products-grid">
+      <div class="product-card">
+        <img src="https://th.bing.com/th/id/OIP.lTmSRLPfVUJxz76w1rT8eQHaEX?w=292&h=180&c=7&r=0&o=5&pid=1.7" alt="Product image" class="product-image" />
+        <article>
+          <h2 class="gradient-text">Amazing Product</h2>
+          <p>This product will change your life. High quality, sleek design, and reliable performance.</p>
+          <button class="buyNowBtn">Buy Now</button>
+          <div class="collapsible">
+            <button class="toggleDetailsBtn">More Details</button>
+            <div class="moreDetails" hidden>
+              <p>Here are additional product features and specifications.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="product-card">
+        <img src="https://th.bing.com/th/id/OIP.HgPa0rOyQFm1dCuGRzjc0AHaFj?w=236&h=180&c=7&r=0&o=5&pid=1.7" alt="Product 2 image" class="product-image" />
+        <article>
+          <h2 class="gradient-text">Superb Gadget</h2>
+          <p>Experience next-level innovation with this superb gadget. Sleek, smart, and powerful.</p>
+          <button class="buyNowBtn">Buy Now</button>
+          <div class="collapsible">
+            <button class="toggleDetailsBtn">More Details</button>
+            <div class="moreDetails" hidden>
+              <p>Features: Fast charging, AI-powered, 2-year warranty.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="product-card">
+        <img src="https://th.bing.com/th/id/OIP.TZY0YmoXYC50O94pj4qgFAHaEW?w=300&h=180&c=7&r=0&o=5&pid=1.7" alt="Product 3 image" class="product-image" />
+        <article>
+          <h2 class="gradient-text">Ultimate Tool</h2>
+          <p>The only tool you'll ever need. Durable, versatile, and easy to use for everyone.</p>
+          <button class="buyNowBtn">Buy Now</button>
+          <div class="collapsible">
+            <button class="toggleDetailsBtn">More Details</button>
+            <div class="moreDetails" hidden>
+              <p>Includes: Lifetime support, multi-purpose attachments, eco-friendly materials.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="product-card">
+        <img src="https://th.bing.com/th/id/OIP.yCxgXVl8Y5iOky7MNKWTUAHaEo?w=282&h=184&c=7&r=0&o=5&pid=1.7" alt="Product 4 image" class="product-image" />
+        <article>
+          <h2 class="gradient-text">Smart Wearable</h2>
+          <p>Track your health and stay connected with this stylish, feature-rich wearable device.</p>
+          <button class="buyNowBtn">Buy Now</button>
+          <div class="collapsible">
+            <button class="toggleDetailsBtn">More Details</button>
+            <div class="moreDetails" hidden>
+              <p>Features: Heart rate monitor, notifications, waterproof, long battery life.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="product-card">
+        <img src="https://th.bing.com/th/id/OIP.3qLA2-TM9_Yx9-MuQKzQOgHaHa?w=170&h=180&c=7&r=0&o=5&pid=1.7" alt="Product 5 image" class="product-image" />
+        <article>
+          <h2 class="gradient-text">Eco Speaker</h2>
+          <p>Enjoy high-quality sound with this eco-friendly, portable Bluetooth speaker.</p>
+          <button class="buyNowBtn">Buy Now</button>
+          <div class="collapsible">
+            <button class="toggleDetailsBtn">More Details</button>
+            <div class="moreDetails" hidden>
+              <p>Features: Recycled materials, 12h playtime, deep bass, compact design.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="product-card">
+        <img src="https://th.bing.com/th/id/OIP.Z4nv7xE9l6LO77FhTHHWLgHaDt?w=348&h=175&c=7&r=0&o=5&pid=1.7" alt="Product 6 image" class="product-image" />
+        <article>
+          <h2 class="gradient-text">Home Assistant</h2>
+          <p>Control your smart home with voice commands and automation features.</p>
+          <button class="buyNowBtn">Buy Now</button>
+          <div class="collapsible">
+            <button class="toggleDetailsBtn">More Details</button>
+            <div class="moreDetails" hidden>
+              <p>Features: Voice control, smart routines, multi-device support.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <h2 class="gradient-text">About</h2>
+      <div class="about-carousel">
+        <div class="about-slide active">
+          <p><strong>Modern Design:</strong> This landing page features a clean, modern, and responsive layout for all devices.</p>
+        </div>
+        <div class="about-slide">
+          <p><strong>Interactive Cards:</strong> Each product card includes details, a buy button, and a collapsible section for more info.</p>
+        </div>
+        <div class="about-slide">
+          <p><strong>Contact Form:</strong> Users can easily reach out via a stylish, accessible contact form with validation.</p>
+        </div>
+        <div class="about-slide">
+          <p><strong>Consistent Branding:</strong> The page uses a consistent blue and pink color palette, with gradients for visual appeal.</p>
+        </div>
+        <div class="about-slide">
+          <p><strong>Modern Footer:</strong> The footer is inspired by professional blogging platforms, with quick links and social icons.</p>
+        </div>
+      </div>
+      <div class="about-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <h2 class="gradient-text">Contact Us</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3 class="gradient-logo">MyCoolio</h3>
+        <p>Innovating your everyday life.</p>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook" ></i>Facebook</a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter" ></i>Twitter</a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram" ></i>Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 MyCoolCompany. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Dynamic Blogging Platform - Publish, read and interact with blogs on various categories." />
+  <title>Blogging Platform</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>BLOGGING PLATFORM</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <form class="search-form" role="search" aria-label="Search blogs" onsubmit="return false;">
+        <input type="search" id="searchInput" name="q" placeholder="Search..." aria-label="Search" required />
+        <button type="submit" aria-label="Search"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.397h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242 1.656a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg></button>
+      </form>
+    </div>
+  </header>
+
+  <button id="sidebar-toggle" aria-label="Open sidebar" class="sidebar-toggle" type="button">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <main>
+    <section class="blog-posts" id="blogContainer">
+      <!-- Blog Cards Here -->
+    </section>
+  </main>
+
+  <aside>
+    <section class="categories">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#" data-category="Technology">Technology</a></li>
+        <li><a href="#" data-category="Lifestyle">Lifestyle</a></li>
+        <li><a href="#" data-category="Travel">Travel</a></li>
+        <li><a href="#" data-category="Education">Education</a></li>
+        <li><a href="#" data-category="All">All</a></li>
+      </ul>
+    </section>
+
+    <section class="subscription">
+      <h3>Subscribe</h3>
+      <form class="subscription-form" id="subscribeForm" novalidate>
+        <label for="name">Name <span aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" required aria-required="true" />
+        <span class="error-message" id="nameError"></span>
+        
+        <label for="email">Email <span aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" required aria-required="true" />
+        <span class="error-message" id="emailError"></span>
+
+        <button type="submit">Subscribe</button>
+        <span class="success-message" id="subscribeSuccess"></span>
+      </form>
+    </section>
+  </aside>
+
+  <footer>
+    <p>&copy; 2025 Blogging Platform. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook" style="color:#f5f0e6;"></i>Facebook</a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter" style="color:#f5f0e6;"></i>Twitter</a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram" style="color:#f5f0e6;"></i>Instagram</a>
+    </div>
+    <address>
+      Contact us: <a href="mailto:contact@bloggingplatform.com">contact@bloggingplatform.com</a>
+    </address>
+  </footer>
+
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+  <script src="script.js"></script>
+</body>
+</html>

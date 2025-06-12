@@ -1,0 +1,187 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+header {
+  background-color: #0073e6;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Main Content */
+.main-content {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+}
+
+/* Trip Details Section */
+#trip-details {
+  margin-bottom: 20px;
+  border-radius: 2%;
+  padding: 5%;
+  box-shadow: 5px 5px 11px -4px rgba(0,0,0,0.75);
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form select,
+form button {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #0073e6;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #005bb5;
+}
+
+form button:disabled {
+  background-color: #cccccc;
+  color: #888888;
+  cursor: not-allowed;
+  border: 1px solid #bbbbbb;
+}
+
+/* User Profile Section */
+#user-profile {
+  margin-bottom: 20px;
+  border-radius: 2%;
+  padding: 5%;
+  box-shadow: 5px 5px 11px -4px rgba(0,0,0,0.75);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+/* Trip Summary Section */
+#trip-summary {
+  margin-bottom: 20px;
+  border-radius: 2%;
+  padding: 5%;
+  box-shadow: 5px 5px 11px -4px rgba(0,0,0,0.75);
+}
+
+/* Community Section */
+#community {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 2%;
+  background-color: #e0e0e0;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#community input {
+  padding: 10px;
+  width: 80%;
+  margin-right: 10px;
+}
+
+#community button{
+    border: none;
+    color: white;
+    background-color: #0073e6;
+    padding: 1% 5%;
+    border-radius: 2%;
+    cursor: pointer;
+}
+
+footer{
+    position: relative;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+#charCount {
+  font-size: 0.9em;
+  margin-left: 10px;
+  color: #555;
+}
+
+/* Media Query for Responsiveness */
+@media screen and (max-width: 600px) {
+  /* Adjust for smaller screens */
+  .user-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .avatar {
+    margin-bottom: 10px;
+  }
+
+  .main-content{
+    display:flex;
+    flex-direction: column;
+  }
+
+  #trip-details{
+    grid-row-end: 2;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  #community input {
+    width: 100%;
+  }
+}
