@@ -87,6 +87,15 @@ function searchPosts(e) {
   displayPosts(result);
 }
 
+// Debounce utility function
+function debounce(fn, delay) {
+  let timeoutId;
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
+
 // Category filtering
 function filterByCategory(e) {
   e.preventDefault();
@@ -155,7 +164,7 @@ function validateForm(e) {
 // Initialize event listeners and load posts
 function initBlogPlatform() {
   displayPosts(posts);
-  if (searchInput) searchInput.addEventListener('input', searchPosts);
+  if (searchInput) searchInput.addEventListener('input', debounce(searchPosts, 400));
   if (categoryLinks) categoryLinks.forEach(link => link.addEventListener('click', filterByCategory));
   if (form) form.addEventListener('submit', validateForm);
 }
